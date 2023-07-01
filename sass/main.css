@@ -1,0 +1,517 @@
+@font-face {
+  font-family: "Mazzard Soft";
+  src: url(../font/MazzardSoft/MazzardSoftH-ExtraBold.otf);
+}
+@font-face {
+  font-family: "Roboto Mono-Regular";
+  src: url(../font/RobotoMono/RobotoMono-Regular.ttf);
+}
+.menu {
+  display: flex;
+  width: 25%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.menu li a {
+  color: white;
+  transition: color 300ms;
+}
+.menu li a:hover {
+  color: #61F3AA;
+}
+
+.hamburguer {
+  border: none;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.hamburguer .hamburguer-item {
+  width: 35px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #61F3AA;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 0.7rem;
+  transition: color 300ms;
+}
+.contact i {
+  font-size: 1.5rem;
+}
+.contact .text {
+  font-size: 0.9rem;
+}
+.contact:hover {
+  color: #61F3AA;
+}
+
+.email {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #61F3AA;
+  border-radius: 100%;
+  background-color: #333438;
+  transition: box-shadow 500ms;
+}
+.email img {
+  width: 25px;
+}
+.email:hover {
+  box-shadow: 0px 0px 20px #61F3AA;
+}
+
+.proyect-box {
+  width: 100%;
+  padding: 30px 40px;
+  font-size: 0.7rem;
+  border-radius: 15px;
+  background-color: #2D2E32;
+}
+.proyect-box .proyect-header {
+  margin-bottom: 1rem;
+}
+.proyect-box .proyect-header .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #61F3AA;
+}
+.proyect-box .proyect-header .title h3 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.proyect-box .proyect-header .title img {
+  width: 25px;
+}
+.proyect-box .proyect-header .text {
+  color: #E0DFDD;
+}
+
+.btn-black {
+  display: inline-block;
+  color: #61F3AA;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: #333438;
+  padding: 10px 40px;
+}
+
+.btn-aqua {
+  display: inline-block;
+  color: #333438;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: #61F3AA;
+  padding: 10px 40px;
+}
+
+.btn-white {
+  display: inline-block;
+  color: #333438;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: white;
+  padding: 3px 20px;
+}
+
+.skill {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+}
+.skill .tooltip {
+  opacity: 0;
+  position: absolute;
+  top: -45px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px 10px;
+  transition: opacity 250ms;
+}
+.skill .tooltip::after {
+  content: "";
+  border: 10px solid transparent;
+  border-top-color: white;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skill img {
+  width: 35px;
+}
+.skill:hover .tooltip {
+  opacity: 1;
+}
+
+.cards {
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #353538;
+}
+.cards .show img {
+  width: 100%;
+}
+.cards .show .lenguages {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cards .show .lenguages li {
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  color: black;
+  font-weight: 700;
+  background-color: #E0DFDD;
+}
+.cards .description .title {
+  color: #61F3AA;
+}
+
+.cards-design {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #353538;
+}
+.cards-design img {
+  width: 100%;
+}
+.cards-design .title {
+  margin: 0;
+  color: #61F3AA;
+}
+
+.webDesign {
+  text-align: center;
+}
+.webDesign img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Mono-Regular";
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #2D2E32;
+}
+header nav .mobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 2rem;
+}
+header nav .mobile .logo {
+  width: 180px;
+}
+header nav .mobile .logo img {
+  width: 100%;
+}
+header nav .mobile .mobile-menu {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 85px;
+  padding: 95px;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 395px;
+  overflow-y: auto;
+  transform: translateX(600px);
+  transition: all 600ms;
+  background-color: black;
+}
+header nav .mobile .mobile-menu .close {
+  width: 24px;
+  height: 32px;
+  cursor: pointer;
+}
+header nav .mobile .mobile-menu .close img {
+  fill: #61F3AA;
+  width: 100%;
+}
+header nav .mobile .mobile-menu .nav-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+header nav .mobile .mobile-menu .nav-menu-mobile li a {
+  color: white;
+}
+header nav .pc {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+}
+header nav .pc .logo {
+  width: 180px;
+}
+header nav .pc .logo img {
+  width: 100%;
+}
+header .container {
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .container .title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 3vw, 3rem);
+}
+header .container .title h1 {
+  margin: 0;
+  color: white;
+  font-family: "Mazzard Soft";
+}
+header .container .title h2 {
+  margin: 0;
+  font-size: 2em;
+  color: #E0DFDD;
+  font-family: "Mazzard Soft";
+}
+header .container .title h2 span {
+  color: #61F3AA;
+}
+
+main {
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25262A;
+}
+main .content {
+  max-width: 1320px;
+}
+main .content .about {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+}
+main .content .about .me {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+main .content .about .me .photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  background-color: #61F3AA;
+}
+main .content .about .me .photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px solid #61F3AA;
+  transform: rotate(8deg);
+  transition: all 800ms;
+}
+main .content .about .me .photo img:hover {
+  transform: rotate(0deg);
+}
+main .content .about .me p {
+  color: white;
+  max-width: 850px;
+}
+main .content .about .me p span {
+  color: #61F3AA;
+}
+main .content .about .habilities {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+main .content .about .habilities .title {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 0;
+  padding: 1rem 0rem;
+  letter-spacing: 2px;
+  justify-content: start;
+  gap: 10px;
+}
+main .content .about .habilities .title .line {
+  width: 2px;
+  height: 2rem;
+  background-color: white;
+}
+main .content .about .habilities .skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  max-width: 830px;
+  padding: 0rem 2rem;
+}
+main .content .title h2 {
+  margin: 0;
+  color: white;
+  margin-bottom: 2rem;
+}
+main .content .proyects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(375px, 100%), 1fr));
+  gap: 32px;
+}
+main .content .content-proyect {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(345px, 100%), 1fr));
+  gap: 32px;
+}
+
+.aditional-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  background-color: #2D2E32;
+}
+.aditional-info .title {
+  margin: 0;
+  margin-bottom: 35px;
+  color: white;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-family: "Mazzard Soft";
+}
+.aditional-info .title span {
+  color: #61F3AA;
+}
+.aditional-info .btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+footer {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+footer .logo {
+  width: 180px;
+}
+footer .logo img {
+  width: 100%;
+}
+footer .contacts {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1290px) {
+  .pc .menu .contact span {
+    display: none;
+  }
+  .me {
+    flex-direction: column;
+  }
+  main .content .about .habilities {
+    align-items: center;
+    flex-direction: column;
+  }
+  main .content .about .habilities .title {
+    flex-direction: column;
+  }
+  main .content .about .habilities .title .line {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  header nav .mobile {
+    display: flex;
+  }
+  header nav .pc {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  header nav .mobile .mobile-menu {
+    width: 100%;
+  }
+  .aditional-info .title {
+    text-align: center;
+  }
+  .webDesign a {
+    margin-bottom: 1rem;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .logo {
+    margin-bottom: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */
